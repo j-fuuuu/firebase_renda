@@ -13,6 +13,8 @@
 		BA254D8F28C17DD500FF848A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA254D8D28C17DD500FF848A /* Main.storyboard */; };
 		BA254D9128C17DD800FF848A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA254D9028C17DD800FF848A /* Assets.xcassets */; };
 		BA254D9428C17DD800FF848A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA254D9228C17DD800FF848A /* LaunchScreen.storyboard */; };
+		BA254D9D28C17FD700FF848A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BA254D9C28C17FD700FF848A /* FirebaseFirestore */; };
+		BA254D9F28C1801400FF848A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA254D9E28C1801400FF848A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		BA254D9028C17DD800FF848A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA254D9328C17DD800FF848A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA254D9528C17DD800FF848A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA254D9E28C1801400FF848A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA254D9D28C17FD700FF848A /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				BA254D9028C17DD800FF848A /* Assets.xcassets */,
 				BA254D9228C17DD800FF848A /* LaunchScreen.storyboard */,
 				BA254D9528C17DD800FF848A /* Info.plist */,
+				BA254D9E28C1801400FF848A /* GoogleService-Info.plist */,
 			);
 			path = firebase_renda;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = firebase_renda;
+			packageProductDependencies = (
+				BA254D9C28C17FD700FF848A /* FirebaseFirestore */,
+			);
 			productName = firebase_renda;
 			productReference = BA254D8428C17DD500FF848A /* firebase_renda.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = BA254D7B28C17DD500FF848A;
+			packageReferences = (
+				BA254D9B28C17FD700FF848A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = BA254D8528C17DD500FF848A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA254D9428C17DD800FF848A /* LaunchScreen.storyboard in Resources */,
+				BA254D9F28C1801400FF848A /* GoogleService-Info.plist in Resources */,
 				BA254D9128C17DD800FF848A /* Assets.xcassets in Resources */,
 				BA254D8F28C17DD500FF848A /* Main.storyboard in Resources */,
 			);
@@ -358,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA254D9B28C17FD700FF848A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA254D9C28C17FD700FF848A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA254D9B28C17FD700FF848A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA254D7C28C17DD500FF848A /* Project object */;
 }
